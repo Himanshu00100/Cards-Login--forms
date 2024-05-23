@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 1</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        div.wrapper1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            /* border:2px solid red; */
+            padding: 10vh 65vh;
+            background: linear-gradient(to right, #b232ed, #f72585);
+        }
+
+        div.wrapper2 {
+            width: 100%;
+            height: 100%;
+            box-shadow: 0px 0px 25px black;
+            /* border: 2px solid red; */
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        form {
+            width: 100%;
+            height: 100%;
+        }
+
+        div.top {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            /* justify-content: space-evenly; */
+            width: 100%;
+            height: 50%;
+            /* border: 2px solid red; */
+            /* padding-top:7vh; */
+        }
+
+        h1 {
+            margin: 5vh;
+        }
+
+        div.login-signup {
+            display: flex;
+            width: 80%;
+            height: 7vh;
+            margin: 3vh;
+            border-radius: 5px;
+            border: 1px solid grey;
+        }
+
+        div.login {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+            border-radius: 5px;
+            /* border:2px solid red; */
+            /* background: linear-gradient(to right, #b232ed, #f72585); */
+        }
+
+        div.signup {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+            /* border: 2px solid red; */
+        }
+
+        a.a1 {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            /* background: linear-gradient(to right, #b232ed, #f72585); */
+            /* border-radius:5px; */
+            padding: 9% 39%;
+        }
+
+        a.a2 {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            /* padding:6% 38%; */
+            /* border:2px solid red; */
+            padding: 9% 36.5%;
+            /* border-radius:5px; */
+            /* background: linear-gradient(to right, #b232ed, #f72585); */
+        }
+
+        input[type=email] {
+            padding: 2vh 27.5vh 2vh 2vh;
+            border: 1px solid grey;
+            border-radius: 5px;
+            text-align: left;
+            color:#f72585;
+            transition: all 0.1s linear;
+            outline: none;
+            margin: 1.5vh;
+        }
+
+        div.bottom {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            /* justify-content: space-evenly; */
+            width: 100%;
+            height: 50%;
+            padding-bottom: 5vh;
+            /* font-size:1.5rem; */
+
+            /* border:2px solid red; */
+        }
+
+        div.notmember {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20vw;
+            height: 5vh;
+            column-gap: 10px;
+        }
+
+        a.notmember {
+            text-decoration: none;
+            color: #f72585;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        input[type=password] {
+            padding: 2vh 27.5vh 2vh 2vh;
+            border-radius: 5px;
+            text-align: left;
+            border: 1px solid grey;
+            transition: all 0.1s linear;
+            outline: none;
+            color:#f72585;
+            margin: 1.5vh;
+        }
+
+        a.forgotpass {
+            text-decoration: none;
+            position: absolute;
+            color: #f72585;
+            font-weight: bold;
+            text-align: left;
+            justify-self: flex-start;
+            bottom: 39.2vh;
+            left: 37vw;
+            font-size: 0.8rem;
+        }
+
+        button {
+            padding: 2.7vh 22.5vh;
+            font-weight: bold;
+            color: black;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+            margin: 3vh;
+        }
+
+        a.a1:hover,
+        a.a2:hover,
+        button:hover {
+            border-radius: 4px;
+            background: linear-gradient(to right, #b232ed, #f72585);
+            color: white;
+        }
+
+        a.trans {
+            transition: background 0.3s linear;
+        }
+
+        input[type=email]:focus,
+        input[type=password]:focus {
+            border: 3px solid #8338ec;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper1">
+        <div class="wrapper2">
+            <form action="" method="get">
+
+                <div class="top">
+                    <h1>Login Form</h1>
+                    <div class="login-signup">
+                        <div class="login">
+                            <a class="a1 trans" href="#login" target="_blank">Login</a>
+                        </div>
+                        <div class="signup">
+                            <a class="a2 trans" href="#signup" target="_blank">Signup</a>
+                        </div>
+
+                    </div>
+                    <input class="focus" type="Email" placeholder="Email Address" required>
+                </div>
+                <div class="bottom">
+                    <input class="focus" type="password" placeholder="Password"  maxlength="10" min="6">
+                    <a class="forgotpass" href="#fofgotpass">Forgot password?</a>
+                    <button>Login</button>
+                    <div class="notmember">
+                        <p>Not a member?</p>
+                        <a class="notmember" href="#signup">Signup now</a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
